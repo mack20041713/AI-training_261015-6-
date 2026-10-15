@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOHOL LUXURY ESCAPE - 4인 가족 6박 7일 프리미엄 여행</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            bohol: {
+              ocean: '#0284c7',
+              turquoise: '#06b6d4',
+              emerald: '#059669',
+              gold: '#d97706',
+              sand: '#fef3c7',
+              navy: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(15,23,42,0.85) 100%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #0284c7;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- 상단 네비게이션 -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center text-white shadow-lg shadow-cyan-500/20">
+          <i class="fa-solid fa-water text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-wider text-white font-serif">BOHOL LUXURY</span>
+          <span class="block text-[10px] text-cyan-300 font-medium tracking-widest uppercase">Family Private 6N7D</span>
+        </div>
+      </div>
+
+      <!-- 데스크탑 메뉴 -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-200">
+        <a href="#transport" class="hover:text-cyan-300 transition-colors">원스톱 이동편</a>
+        <a href="#resorts" class="hover:text-cyan-300 transition-colors">최고급 리조트</a>
+        <a href="#activities" class="hover:text-cyan-300 transition-colors">시그니처 투어</a>
+        <a href="#itinerary" class="hover:text-cyan-300 transition-colors">6박 7일 일정표</a>
+        <a href="#budget" class="hover:text-cyan-300 transition-colors">예상 경비 계산기</a>
+        <button onclick="openModal()" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all text-xs tracking-wider uppercase">
+          <i class="fa-solid fa-paper-plane mr-1.5"></i> 상담 및 예약
+        </button>
+      </div>
+
+      <!-- 모바일 햄버거 버튼 -->
+      <button onclick="toggleMobileMenu()" class="md:hidden text-white text-2xl p-2 focus:outline-none" aria-label="메뉴 토글">
+        <i id="menuIcon" class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- 모바일 드롭다운 메뉴 -->
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+      <a href="#transport" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium py-1">원스톱 이동편 (광명 ➔ 보홀)</a>
+      <a href="#resorts" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium py-1">최고급 리조트</a>
+      <a href="#activities" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium py-1">시그니처 투어</a>
+      <a href="#itinerary" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium py-1">6박 7일 일정표</a>
+      <a href="#budget" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-cyan-400 font-medium py-1">예상 경비 계산기</a>
+      <button onclick="openModal(); toggleMobileMenu();" class="w-full mt-2 py-3 rounded-xl bg-cyan-600 text-white font-semibold text-center">
+        상담 및 견적 요청
+      </button>
+    </div>
+  </nav>
+
+  <!-- 1. 히어로 섹션 (Hero Section) -->
+  <header class="relative min-h-[92vh] flex items-center justify-center pt-20 overflow-hidden bg-slate-950">
+    <!-- 고화질 이미지 배경 (보홀 알로나 비치 & 에메랄드 바다) -->
+    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=85" 
+         alt="Bohol Ocean" 
+         class="absolute inset-0 w-full h-full object-cover object-center scale-105 animate-pulse transition-all duration-1000"
+         style="animation-duration: 12s;"
+         onerror="this.src='https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1920&q=80'" />
+    <div class="absolute inset-0 hero-gradient"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 text-xs sm:text-sm font-semibold mb-6 uppercase tracking-widest shadow-inner">
+        <i class="fa-solid fa-crown text-amber-400"></i> Premium Family Private Tour 2026/2027
+      </div>
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
+        에메랄드빛 바다와 신비한 자연,<br class="hidden sm:inline">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-teal-200 to-emerald-400 font-serif">필리핀 보홀 4인 가족 6박 7일</span>
+      </h1>
+      <p class="text-base sm:text-xl text-slate-200 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+        광명 출발부터 인천 직항, 팡라오 신공항 단독 픽업까지 원스톱 케어.<br class="hidden sm:inline">
+        발리카삭 거북이, 초콜릿힐, 프라이빗 럭셔리 리조트에서 펼쳐지는 온전한 가족 힐링 휴양.
+      </p>
+
+      <!-- 비디오 및 핵심 카드 바로가기 -->
+      <div class="flex flex-wrap items-center justify-center gap-4 text-sm font-medium">
+        <a href="#itinerary" class="px-8 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold shadow-xl shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5">
+          <i class="fa-regular fa-calendar-check mr-2"></i>6박 7일 코스 보기
+        </a>
+        <button onclick="toggleVideoModal()" class="px-7 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold transition-all flex items-center gap-2">
+          <i class="fa-solid fa-circle-play text-cyan-400 text-lg"></i> 보홀 생생 영상 보기
+        </button>
+      </div>
+
+      <!-- 핵심 스펙 카드 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14 text-left">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
+          <span class="text-cyan-300 text-xs font-bold block mb-1 uppercase tracking-wider">이동 최적화</span>
+          <p class="text-white font-bold text-base sm:text-lg">광명 ➔ 보홀 직항</p>
+          <span class="text-slate-300 text-xs">약 4시간 30분 직항 노선</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
+          <span class="text-cyan-300 text-xs font-bold block mb-1 uppercase tracking-wider">최고급 숙박</span>
+          <p class="text-white font-bold text-base sm:text-lg">헤난 / 아모리타</p>
+          <span class="text-slate-300 text-xs">알로나 비치 특급 리조트</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
+          <span class="text-cyan-300 text-xs font-bold block mb-1 uppercase tracking-wider">단독 프라이빗 투어</span>
+          <p class="text-white font-bold text-base sm:text-lg">발리카삭 거북이</p>
+          <span class="text-slate-300 text-xs">안경원숭이 & 반딧불이</span>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl">
+          <span class="text-cyan-300 text-xs font-bold block mb-1 uppercase tracking-wider">안심 케어</span>
+          <p class="text-white font-bold text-base sm:text-lg">전용 밴 & 한국어</p>
+          <span class="text-slate-300 text-xs">4인 단독 차량 전일정 지원</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. 이동편 섹션 (광명 ➔ 인천공항 ➔ 보홀 ➔ 리조트) -->
+  <section id="transport" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-cyan-600 font-bold text-xs uppercase tracking-widest bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">Door-to-Door Transportation</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+          광명에서 보홀 리조트까지, <span class="text-cyan-600">가장 완벽하고 편안한 이동 동선</span>
+        </h2>
+        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+          4인 가족과 짐을 고려하여 환승 피로도를 최소화한 프리미엄 이동 가이드입니다.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- 타임라인 중앙선 (데스크탑) -->
+        <div class="hidden lg:block absolute left-1/2 top-10 bottom-10 w-0.5 bg-gradient-to-b from-cyan-400 via-blue-500 to-emerald-400 transform -translate-x-1/2"></div>
+
+        <div class="space-y-12">
+          <!-- Step 1: 광명 ➔ 인천국제공항 -->
+          <div class="relative flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-1/2 lg:text-right pr-0 lg:pr-10 order-2 lg:order-1">
+              <span class="inline-block px-2.5 py-1 rounded text-xs font-bold bg-blue-100 text-blue-800 mb-2">STEP 01</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">경기도 광명 ➔ 인천국제공항 (T1/T2)</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                4인 가족의 편의를 위해 <strong>공항리무진 6004번</strong> 또는 <strong>사전 예약 대형 콜밴(스타리아/카니발)</strong>을 추천합니다.
+              </p>
+              <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-left inline-block w-full">
+                <ul class="space-y-1.5 text-slate-700">
+                  <li><i class="fa-solid fa-van-shuttle text-cyan-600 mr-2"></i><strong>베스트 추천:</strong> 프라이빗 콜밴 (도어투도어 / 약 55~65분 소요, 8~10만원 선)</li>
+                  <li><i class="fa-solid fa-bus text-cyan-600 mr-2"></i><strong>공항버스 6004번:</strong> 광명역/철산역 탑승 ➔ 인천공항 T1 약 60분, T2 약 80분 (성인 17,000원)</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 아이콘 뱃지 -->
+            <div class="z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-blue-500/30 order-1 lg:order-2">
+              <i class="fa-solid fa-car-side"></i>
+            </div>
+            <div class="w-full lg:w-1/2 pl-0 lg:pl-10 order-3">
+              <img src="https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=800&q=80" alt="Incheon Airport" class="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-100">
+            </div>
+          </div>
+
+          <!-- Step 2: 인천공항 ➔ 보홀 팡라오 국제공항 (직항) -->
+          <div class="relative flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-1/2 pr-0 lg:pr-10 order-2 lg:order-1">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Flight to Bohol" class="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-100">
+            </div>
+            <div class="z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-cyan-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-cyan-500/30 order-1 lg:order-2">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <div class="w-full lg:w-1/2 lg:text-left pl-0 lg:pl-10 order-3">
+              <span class="inline-block px-2.5 py-1 rounded text-xs font-bold bg-cyan-100 text-cyan-800 mb-2">STEP 02</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">인천(ICN) ➔ 팡라오 보홀(TAG) 직항 비행</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                세부를 거쳐 배(페리)를 타는 번거로움 없이, <strong>보홀 팡라오 신공항 직항 노선</strong>으로 논스톱 입국합니다.
+              </p>
+              <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-left">
+                <p class="font-semibold text-slate-800 mb-1"><i class="fa-solid fa-clock text-cyan-600 mr-1.5"></i>비행 시간: 약 4시간 30분 소요</p>
+                <p class="text-slate-600">운항 항공사: 제주항공, 에어부산 등 (주간/야간 정기 직항 운항 중, e-Travel 사전 등록 필수)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: 보홀 팡라오 공항 ➔ 리조트 이동 -->
+          <div class="relative flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-1/2 lg:text-right pr-0 lg:pr-10 order-2 lg:order-1">
+              <span class="inline-block px-2.5 py-1 rounded text-xs font-bold bg-emerald-100 text-emerald-800 mb-2">STEP 03</span>
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900">팡라오 공항 ➔ 호텔/리조트 단독 픽업</h3>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                공항 도착 게이트에서 고객님 가족 전용 팻말을 든 드라이버가 맞이하며, 에어컨 완비 전용 밴으로 이동합니다.
+              </p>
+              <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs text-left inline-block w-full">
+                <p class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-map-pin text-emerald-600 mr-1.5"></i>소요 시간: 리조트까지 불과 10분~15분 거리!</p>
+                <p class="text-slate-600">공항과 주요 휴양 단지(알로나 비치)가 매우 가까워 아이들과 부모님 모두 피로감 없이 즉시 체크인 가능합니다.</p>
+              </div>
+            </div>
+            <div class="z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 order-1 lg:order-2">
+              <i class="fa-solid fa-hotel"></i>
+            </div>
+            <div class="w-full lg:w-1/2 pl-0 lg:pl-10 order-3">
+              <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=800&q=80" alt="Resort Transfer" class="w-full h-56 object-cover rounded-2xl shadow-md border border-slate-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 최고급 리조트 & 숙박 시설 추천 -->
+  <section id="resorts" class="py-24 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-cyan-600 font-bold text-xs uppercase tracking-widest bg-cyan-100 px-3 py-1 rounded-full">Luxury Stays Selection</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+            보홀 최고 시설의 5성급 리조트 컬렉션
+          </h2>
+          <p class="text-slate-600 text-sm mt-2">4인 가족(성인 2 + 자녀 2)이 머물기 가장 쾌적하고 럭셔리한 3대 리조트 비교</p>
+        </div>
+        <div class="mt-4 md:mt-0 flex gap-2">
+          <span class="text-xs bg-white text-slate-600 px-3 py-1.5 rounded-lg border border-slate-200 flex items-center">
+            <i class="fa-solid fa-circle-check text-emerald-500 mr-1.5"></i> 전 리조트 조식 포함
+          </span>
+          <span class="text-xs bg-white text-slate-600 px-3 py-1.5 rounded-lg border border-slate-200 flex items-center">
+            <i class="fa-solid fa-circle-check text-emerald-500 mr-1.5"></i> 공항 무료 셔틀 연계
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- 리조트 1: 헤난 리조트 알로나 비치 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 transition-all hover:-translate-y-1.5 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Henann Resort Bohol" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full text-xs font-bold">
+              <i class="fa-solid fa-star"></i> 5-STAR LUXURY
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-slate-900 text-xs font-bold">
+              알로나 비치 정중앙 위치
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="text-xl font-bold text-slate-900">헤난 리조트 알로나 비치</h3>
+                <span class="text-xs text-cyan-600 font-semibold">가족 선호도 1위</span>
+              </div>
+              <p class="text-slate-500 text-xs mb-4">Henann Resort Alona Beach, Bohol</p>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                보홀 최대 규모의 리조트로, 초대형 야외 풀장 3개와 풀사이드 바, 그리고 번화한 알로나 비치 상권과 바로 직결되어 가족 여행에 가장 편리합니다.
+              </p>
+              <div class="space-y-2 mb-6 bg-slate-50 p-3.5 rounded-xl text-xs text-slate-700">
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">추천 룸타입</span>
+                  <span class="font-semibold text-slate-900">패밀리룸 / 풀 액세스 룸</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">대표 시설</span>
+                  <span class="font-semibold text-slate-900">3개 대형 수영장, 키즈 프렌들리</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">비치 접근성</span>
+                  <span class="font-semibold text-emerald-600">도보 0분 (전용 비치 체어)</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="selectResort('헤난 리조트 알로나 비치', 420000)" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-cyan-600 text-white font-medium text-sm transition-colors flex items-center justify-center gap-2">
+              <i class="fa-solid fa-check"></i> 견적에 이 리조트 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- 리조트 2: 아모리타 리조트 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-cyan-300 relative transition-all hover:-translate-y-1.5 flex flex-col">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 z-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-[11px] font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow">
+            전문가 최고 추천
+          </div>
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Amorita Resort Bohol" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full text-xs font-bold">
+              <i class="fa-solid fa-award"></i> BOUTIQUE LUXURY
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-slate-900 text-xs font-bold">
+              절벽 위 파노라마 오션뷰
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="text-xl font-bold text-slate-900">아모리타 리조트</h3>
+                <span class="text-xs text-cyan-600 font-semibold">프라이빗 럭셔리</span>
+              </div>
+              <p class="text-slate-500 text-xs mb-4">Amorita Resort (Cliff-top Luxury)</p>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                알로나 비치 끝자락 절벽 위에 위치하여 환상적인 바다 전망과 조용한 휴식을 선사합니다. 품격 있는 인피니티 풀과 독채 풀빌라를 보유하고 있습니다.
+              </p>
+              <div class="space-y-2 mb-6 bg-cyan-50/60 p-3.5 rounded-xl text-xs text-slate-700">
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">추천 룸타입</span>
+                  <span class="font-semibold text-slate-900">2 베드룸 풀빌라 / 주니어 스위트</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">대표 시설</span>
+                  <span class="font-semibold text-slate-900">클리프 인피니티 풀, 사프론 레스토랑</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">특징</span>
+                  <span class="font-semibold text-cyan-700">조용한 프라이빗 & 알로나 전용 계단</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="selectResort('아모리타 리조트 (풀빌라/스위트)', 580000)" class="w-full py-3 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-medium text-sm transition-colors flex items-center justify-center gap-2">
+              <i class="fa-solid fa-check"></i> 견적에 이 리조트 담기
+            </button>
+          </div>
+        </div>
+
+        <!-- 리조트 3: 더 벨뷰 리조트 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 transition-all hover:-translate-y-1.5 flex flex-col">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="The Bellevue Resort" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-amber-300 px-3 py-1 rounded-full text-xs font-bold">
+              <i class="fa-solid fa-star"></i> 5-STAR TRANQUIL
+            </div>
+            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-lg text-slate-900 text-xs font-bold">
+              돌조 비치 단독 소유
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="text-xl font-bold text-slate-900">더 벨뷰 리조트 보홀</h3>
+                <span class="text-xs text-cyan-600 font-semibold">완벽한 언택트 힐링</span>
+              </div>
+              <p class="text-slate-500 text-xs mb-4">The Bellevue Resort Bohol (Doljo Beach)</p>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                북적거림에서 벗어나 한적한 돌조 비치를 품은 5성급 리조트로, 넓은 백사장과 가족 친화형 키즈클럽, 대형 잔디 가든을 갖추고 있습니다.
+              </p>
+              <div class="space-y-2 mb-6 bg-slate-50 p-3.5 rounded-xl text-xs text-slate-700">
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">추천 룸타입</span>
+                  <span class="font-semibold text-slate-900">프리미어 오션뷰 / 벨뷰 스위트</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">대표 시설</span>
+                  <span class="font-semibold text-slate-900">초대형 풀, 프라이빗 비치 스포츠</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-500">특징</span>
+                  <span class="font-semibold text-indigo-600">환상적인 일몰 & 평화로운 환경</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="selectResort('더 벨뷰 리조트', 380000)" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-cyan-600 text-white font-medium text-sm transition-colors flex items-center justify-center gap-2">
+              <i class="fa-solid fa-check"></i> 견적에 이 리조트 담기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 보홀 추천 액티비티 & 관광지 -->
+  <section id="activities" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-cyan-600 font-bold text-xs uppercase tracking-widest bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">Exclusive Bohol Highlights</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+          놓칠 수 없는 보홀 버킷리스트 액티비티
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          세계적인 해양 국립공원부터 기네스북급 지형 경관까지, 4인 가족 모두가 만족하는 핵심 투어
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 투어 1: 발리카삭 호핑 & 거북이 -->
+        <div class="group rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Balicasag Island" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-cyan-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">Must-Do No.1</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 mb-1">발리카삭 & 버진아일랜드</h3>
+              <p class="text-xs text-cyan-600 font-medium mb-3">야생 바다거북 & 돌고래 와칭</p>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                세계 3대 다이빙 포인트 발리카삭 아일랜드에서 거대 바다거북과 니모를 만나는 스노클링 및 신비로운 모래섬 버진아일랜드 산책.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span><i class="fa-solid fa-clock mr-1"></i>반일 투어 (오전)</span>
+              <span class="font-semibold text-slate-700">단독 방카선 배정</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 투어 2: 육상 데이투어 (초콜릿힐 & 원숭이) -->
+        <div class="group rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=600&q=80" alt="Chocolate Hills" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">자연의 신비</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 mb-1">초콜릿 힐 & 안경원숭이</h3>
+              <p class="text-xs text-emerald-600 font-medium mb-3">보홀의 랜드마크 육상 코스</p>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                키세스 초콜릿을 닮은 1,268개의 언덕 초콜릿 힐과 손바닥만 한 세계 최소 크기의 타르시어(안경원숭이) 보호구역 탐방.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span><i class="fa-solid fa-clock mr-1"></i>종일 투어</span>
+              <span class="font-semibold text-slate-700">단독 전용 밴</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 투어 3: 로복강 크루즈 런치 & 반딧불이 -->
+        <div class="group rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Loboc River" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">가족 낭만</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 mb-1">로복강 크루즈 & 반딧불 투어</h3>
+              <p class="text-xs text-amber-600 font-medium mb-3">선상 뷔페 & 밤하늘의 크리스마스트리</p>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                열대 우림 로복강을 유람하며 즐기는 현지식 뷔페 런치와 해질녘 맹그로브 숲 수만 마리 반딧불이를 만나는 감동의 시간.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span><i class="fa-solid fa-clock mr-1"></i>오후~야간</span>
+              <span class="font-semibold text-slate-700">모터보트/카약</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 투어 4: 나팔링 정어리 떼 스노클링 -->
+        <div class="group rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-48 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Napaling Reef" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-indigo-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">핫플레이스</span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-900 mb-1">나팔링 정어리 떼 & 히낙다난 동굴</h3>
+              <p class="text-xs text-indigo-600 font-medium mb-3">수만 마리 은빛 정어리 군무</p>
+              <p class="text-slate-600 text-xs leading-relaxed">
+                해변에서 단 몇 걸음만 들어가도 펼쳐지는 수만 마리 정어리 떼의 환상적인 은빛 파도와 신비로운 천연 종유석 동굴 호수 수영.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span><i class="fa-solid fa-clock mr-1"></i>오전 반일</span>
+              <span class="font-semibold text-slate-700">장비 일체 대여</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 4인 가족 6박 7일 맞춤형 상세 일정표 -->
+  <section id="itinerary" class="py-24 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-cyan-950/80 border border-cyan-800 px-3 py-1 rounded-full">Perfect 6N 7D Plan</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">
+          4인 가족 맞춤 6박 7일 황금 일정표
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          무리한 패키지가 아닌, 아이와 부모님의 체력을 배려한 <strong>"오전 투어 + 오후 리조트 휴식/자유시간"</strong>의 완벽 밸런스.
+        </p>
+      </div>
+
+      <!-- 일차별 탭 버튼 -->
+      <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 mb-8 custom-scrollbar">
+        <button onclick="switchDay(1)" id="dayBtn1" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-cyan-500 text-slate-950 shadow-lg">Day 1 [출국/입국]</button>
+        <button onclick="switchDay(2)" id="dayBtn2" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 2 [발리카삭]</button>
+        <button onclick="switchDay(3)" id="dayBtn3" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 3 [초콜릿힐 육상]</button>
+        <button onclick="switchDay(4)" id="dayBtn4" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 4 [리조트 힐링]</button>
+        <button onclick="switchDay(5)" id="dayBtn5" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 5 [정어리/동굴]</button>
+        <button onclick="switchDay(6)" id="dayBtn6" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 6 [쇼핑/스파]</button>
+        <button onclick="switchDay(7)" id="dayBtn7" class="day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700">Day 7 [귀국/광명]</button>
+      </div>
+
+      <!-- 일차별 상세 컨텐츠 박스 -->
+      <div id="dayContent" class="bg-slate-800/90 rounded-3xl p-6 sm:p-10 border border-slate-700/80 shadow-2xl transition-all">
+        <!-- JS로 동적 렌더링 됩니다 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 4인 가족 예상 여행 경비 계산기 (Budget Calculator) -->
+  <section id="budget" class="py-24 bg-white text-slate-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-cyan-600 font-bold text-xs uppercase tracking-widest bg-cyan-50 px-3 py-1 rounded-full border border-cyan-200">Interactive Budget Calculator</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+          4인 가족 6박 7일 예상 경비 계산기
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          원하는 리조트 등급 및 옵션을 선택하여 실시간으로 총 예상 견적(항공, 숙박 6박, 투어, 식비, 이동편)을 확인하세요.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- 옵션 컨트롤 (7컬럼) -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="font-bold text-lg text-slate-800 flex items-center">
+            <i class="fa-solid fa-sliders text-cyan-600 mr-2"></i>패키지 세부 옵션 선택
+          </h3>
+
+          <!-- 인원 수 선택 -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">여행 인원</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button onclick="setTravelers(3)" id="btnPax3" class="py-2.5 rounded-xl border border-slate-300 bg-white text-xs font-bold hover:border-cyan-500 transition-colors">3인 가족</button>
+              <button onclick="setTravelers(4)" id="btnPax4" class="py-2.5 rounded-xl border-2 border-cyan-500 bg-cyan-50 text-cyan-800 text-xs font-bold transition-colors">4인 가족 (기본)</button>
+              <button onclick="setTravelers(5)" id="btnPax5" class="py-2.5 rounded-xl border border-slate-300 bg-white text-xs font-bold hover:border-cyan-500 transition-colors">5인 대가족</button>
+            </div>
+          </div>
+
+          <!-- 리조트 선택 -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">숙박 6박 선택 (1박당 평균 기준)</label>
+            <select id="resortSelect" onchange="calculateBudget()" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 font-medium">
+              <option value="420000">헤난 리조트 알로나 비치 (패밀리 룸 - 1박 약 42만원)</option>
+              <option value="580000" selected>아모리타 리조트 (럭셔리 스위트/풀빌라 - 1박 약 58만원)</option>
+              <option value="380000">더 벨뷰 리조트 보홀 (오션뷰 쿼드 - 1박 약 38만원)</option>
+              <option value="260000">가성비 4성급 프리미엄 리조트 (1박 약 26만원)</option>
+            </select>
+          </div>
+
+          <!-- 항공권 옵션 -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">인천-보홀 왕복 직항 항공권 (1인당)</label>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="flex items-center p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-cyan-400">
+                <input type="radio" name="flightOption" value="480000" checked onchange="calculateBudget()" class="text-cyan-600 focus:ring-cyan-500">
+                <div class="ml-3 text-xs">
+                  <span class="block font-bold text-slate-800">일반 LCC 직항 (약 48만)</span>
+                  <span class="text-slate-500">제주항공/에어부산 (위탁수하물 포함)</span>
+                </div>
+              </label>
+              <label class="flex items-center p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-cyan-400">
+                <input type="radio" name="flightOption" value="700000" onchange="calculateBudget()" class="text-cyan-600 focus:ring-cyan-500">
+                <div class="ml-3 text-xs">
+                  <span class="block font-bold text-slate-800">성수기/프리미엄석 (약 70만)</span>
+                  <span class="text-slate-500">성수기 연휴 및 좌석 지정</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 추가 포함 옵션 체크박스 -->
+          <div class="space-y-2 pt-2">
+            <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">포함 투어 & 서비스</span>
+            
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="checkGwangmyeong" checked onchange="calculateBudget()" class="w-4 h-4 text-cyan-600 rounded focus:ring-cyan-500">
+                <span class="text-xs font-medium text-slate-800">광명 ➔ 인천공항 왕복 4인 전용 리무진 밴</span>
+              </div>
+              <span class="text-xs font-bold text-cyan-600">+190,000원</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="checkHopping" checked onchange="calculateBudget()" class="w-4 h-4 text-cyan-600 rounded focus:ring-cyan-500">
+                <span class="text-xs font-medium text-slate-800">발리카삭 거북이 단독 단독선 + 스노클링 전원</span>
+              </div>
+              <span class="text-xs font-bold text-cyan-600">+280,000원</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="checkLandTour" checked onchange="calculateBudget()" class="w-4 h-4 text-cyan-600 rounded focus:ring-cyan-500">
+                <span class="text-xs font-medium text-slate-800">초콜릿힐 육상투어 & 로복강 크루즈 런치 (4인 단독 밴)</span>
+              </div>
+              <span class="text-xs font-bold text-cyan-600">+340,000원</span>
+            </label>
+
+            <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="checkDining" checked onchange="calculateBudget()" class="w-4 h-4 text-cyan-600 rounded focus:ring-cyan-500">
+                <span class="text-xs font-medium text-slate-800">6일 전일정 식비 및 현지 미식 경비 (추천 예산)</span>
+              </div>
+              <span class="text-xs font-bold text-cyan-600">+900,000원</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 계산 결과 표시창 (5컬럼) -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white p-6 sm:p-8 rounded-2xl flex flex-col justify-between shadow-2xl border border-slate-700">
+          <div>
+            <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+              <span class="text-xs text-cyan-300 font-bold uppercase tracking-widest">Est. Total Quotation</span>
+              <span class="text-[11px] bg-cyan-900/80 text-cyan-200 px-2.5 py-1 rounded-full border border-cyan-700">실시간 계산</span>
+            </div>
+
+            <!-- 세부 내역 -->
+            <div class="space-y-3 text-xs mb-8">
+              <div class="flex justify-between text-slate-300">
+                <span>항공권 (<span id="calcPaxLabel">4</span>인 왕복 직항)</span>
+                <span id="detailFlight" class="font-semibold text-white">0원</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>리조트 (6박 총액)</span>
+                <span id="detailResort" class="font-semibold text-white">0원</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>공항 이동편 (광명+보홀 전용밴)</span>
+                <span id="detailTransfer" class="font-semibold text-white">0원</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>시그니처 투어 & 액티비티</span>
+                <span id="detailTour" class="font-semibold text-white">0원</span>
+              </div>
+              <div class="flex justify-between text-slate-300">
+                <span>식비 및 기타 팁/포켓머니</span>
+                <span id="detailDining" class="font-semibold text-white">0원</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="pt-4 border-t border-slate-700/80 mb-6">
+              <div class="text-slate-400 text-xs mb-1">총 예상 경비 (4인 가족 기준)</div>
+              <div class="text-3xl sm:text-4xl font-extrabold text-cyan-400 tracking-tight">
+                <span id="totalKRW">0</span><span class="text-lg font-bold text-slate-300 ml-1">원</span>
+              </div>
+              <div class="text-slate-400 text-xs mt-1">
+                약 <span id="totalPHP" class="font-semibold text-amber-300">0</span> PHP (페소 환율 24.5원 기준)
+              </div>
+              <div class="text-[11px] text-cyan-200/70 mt-2">
+                * 1인당 약 <span id="perPersonKRW" class="font-bold text-white">0</span>원 (쇼핑 제외 올인클루시브급)
+              </div>
+            </div>
+
+            <button onclick="openModalWithBudget()" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-cyan-500/25 transition-all text-center">
+              이 견적으로 상세 상담 신청하기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 & 문의 안내 -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-2 text-white font-bold text-base mb-3 font-serif">
+          <i class="fa-solid fa-water text-cyan-400"></i>
+          <span>BOHOL LUXURY FAMILY ESCAPE</span>
+        </div>
+        <p class="leading-relaxed text-slate-400">
+          필리핀 보홀 팡라오 전문 프라이빗 투어 라운지.<br>
+          Google Apps Script Web App 연계 배포 호환 단일 모듈 애플리케이션입니다.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-3 text-sm">고객 지원 및 비상 연락</h4>
+        <p class="mb-1"><i class="fa-solid fa-phone text-cyan-400 mr-2"></i>한국 직통: 02-1588-0000</p>
+        <p class="mb-1"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i>현지 보홀 라운지 24H 카카오/왓츠앱 연계</p>
+        <p><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>Panglao Island Circumferential Rd, Bohol</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-3 text-sm">필수 여행 안내</h4>
+        <p class="leading-relaxed">
+          - 필리핀 입국 시 e-Travel(전자입국신고서)은 출발 72시간 전 작성 권장.<br>
+          - 여권 만료일은 출국일 기준 6개월 이상 필수 잔여 필요.<br>
+          - 15세 미만 아동 동반 시 영문 가족관계증명서 지참.
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-slate-900 text-center text-slate-500">
+      &copy; 2026 Bohol Luxury Travel Solutions. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- 동영상 모달 (Video Showcase) -->
+  <div id="videoModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative">
+      <div class="p-4 flex items-center justify-between border-b border-slate-800 text-white">
+        <span class="font-bold text-sm text-cyan-400"><i class="fa-solid fa-film mr-2"></i>보홀 프리미엄 여행 영상</span>
+        <button onclick="toggleVideoModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="relative pt-[56.25%] bg-black">
+        <iframe id="videoIframe" class="absolute inset-0 w-full h-full" 
+                src="" 
+                title="Bohol Travel Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="p-4 bg-slate-900 text-slate-300 text-xs flex justify-between items-center">
+        <span>푸른 바다와 산호초, 그리고 안경원숭이가 기다리는 보홀을 미리 만나보세요.</span>
+        <button onclick="toggleVideoModal()" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 상담 및 예약 신청 모달 (Apps Script 연계 가능 구조) -->
+  <div id="reserveModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-xs font-bold text-cyan-600 uppercase tracking-widest bg-cyan-50 px-2.5 py-1 rounded">Reservation Inquiry</span>
+        <h3 class="text-2xl font-black text-slate-900 mt-2">보홀 가족 여행 맞춤 견적 문의</h3>
+        <p class="text-xs text-slate-500 mt-1">20년차 전문 상담원이 24시간 내 가장 정확한 맞춤 일정표를 회신드립니다.</p>
+      </div>
+
+      <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">신청자 성함 *</label>
+          <input type="text" id="custName" required placeholder="홍길동" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">연락처 *</label>
+            <input type="tel" id="custPhone" required placeholder="010-0000-0000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">희망 출발 시기 *</label>
+            <input type="month" id="custDate" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">현재 산출된 예상 견적 내용</label>
+          <input type="text" id="custBudgetSummary" readonly class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold cursor-not-allowed">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">추가 요청사항 (자녀 연령, 선호 룸타입 등)</label>
+          <textarea id="custNotes" rows="3" placeholder="예: 자녀가 초등학생 2명입니다. 수영장 접근성이 좋은 룸을 선호합니다." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500"></textarea>
+        </div>
+
+        <div id="modalNotice" class="hidden p-3 rounded-xl bg-emerald-50 text-emerald-800 text-[11px] font-medium border border-emerald-200">
+          문의가 정상 접수되었습니다! 담당자가 곧 연락드리겠습니다.
+        </div>
+
+        <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-sm shadow-lg shadow-cyan-600/30 transition-all">
+          <i class="fa-solid fa-paper-plane mr-2"></i>무료 맞춤 일정 & 견적서 받기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 인라인 자바스크립트 로직 -->
+  <script>
+    // 6박 7일 데이터 정의
+    const ITINERARY_DATA = {
+      1: {
+        title: "Day 1 : 설레는 출발과 보홀 입국 (광명 ➔ 인천 ➔ 팡라오)",
+        badge: "출국 & 체크인",
+        desc: "무리하지 않고 편안한 입국 동선에 집중하는 날입니다.",
+        timeline: [
+          { time: "09:30", action: "광명 출발 (자택/광명역)", detail: "사전 예약 전용 콜밴 또는 공항버스 6004번 탑승, 짐 싣고 여유롭게 공항으로 이동" },
+          { time: "11:00", action: "인천국제공항 도착 & 수속", detail: "수하물 위탁 및 웹 체크인, 패밀리 전용 출국 패스트트랙 및 점심 식사" },
+          { time: "13:30", action: "인천(ICN) ➔ 팡라오(TAG) 비행", detail: "직항 항공기 탑승 (약 4시간 30분 소요, 기내 엔터테인먼트 및 휴식)" },
+          { time: "17:30", action: "팡라오 국제공항 도착 & 단독 픽업", detail: "입국 심사 및 짐 찾기 ➔ 전용 드라이버 미팅 후 에어컨 밴 탑승 (리조트까지 10분)" },
+          { time: "18:30", action: "리조트 체크인 & 알로나 비치 석식", detail: "웰컴 드링크와 함께 체크인 후 알로나 비치 해변가 레스토랑에서 신선한 해산물 디너" }
+        ],
+        highlight: "체크포인트: 팡라오 신공항은 알로나 비치와 10분 거리로 피로감이 거의 없습니다."
+      },
+      2: {
+        title: "Day 2 : 발리카삭 호핑투어 & 버진아일랜드 (거북이와 수영)",
+        badge: "바다의 하이라이트",
+        desc: "보홀 여행의 정점! 바다거북과 신비한 산호초를 만나는 날입니다.",
+        timeline: [
+          { time: "06:30", action: "리조트 조식 뷔페", detail: "든든하게 아침 식사 후 수영복 래시가드 착용" },
+          { time: "07:30", action: "단독 방카보트 탑승 & 돌고래 와칭", detail: "우리 가족만 탑승하는 단독 배로 이동 중 뛰노는 야생 돌고래 떼 관찰" },
+          { time: "08:30", action: "발리카삭 마린 생츄어리 스노클링", detail: "전문 현지 가이드와 함께 바다거북 포인트에서 인생샷 촬영 및 산호초 니모 감상" },
+          { time: "11:00", action: "버진아일랜드 모래톱 산책", detail: "물때에 따라 바다 한가운데 드러나는 순백의 모래길 산책 및 코코넛 시음" },
+          { time: "13:00", action: "리조트 복귀 및 휴식", detail: "샤워 후 리조트 메인 풀장에서 여유로운 오후 가족 물놀이 및 풀사이드 스낵" }
+        ],
+        highlight: "준비물: 아쿠아슈즈, 래시가드, 방수팩 (고프로 수중 촬영 가이드 지원)"
+      },
+      3: {
+        title: "Day 3 : 보홀 내륙 어드벤처 (초콜릿힐, 원숭이, 로복강 크루즈)",
+        badge: "자연 탐방 데이",
+        desc: "기네스북에 등재된 천혜의 지형과 희귀 동물을 단독 전용 밴으로 투어합니다.",
+        timeline: [
+          { time: "09:00", action: "전용 밴 리조트 픽업", detail: "전용 차량 탑승 후 보홀 본섬 내륙 드라이브" },
+          { time: "10:30", action: "초콜릿 힐 (Chocolate Hills) 전망대", detail: "1,268개의 키세스 언덕이 장관을 이루는 보홀 최고 랜드마크에서 가족사진 촬영 (ATV 체험 옵션)" },
+          { time: "12:00", action: "로복강(Loboc River) 크루즈 런치", detail: "강을 거슬러 오르는 유람선 위에서 현지식 뷔페 런치 & 원주민 민속 댄스 관람" },
+          { time: "14:00", action: "타르시어(안경원숭이) 보호구역", detail: "세계에서 가장 작은 원숭이 타르시어의 눈망울을 직접 관찰하는 생태 체험" },
+          { time: "15:30", action: "맨메이드 포레스트 & 바클레욘 성당", detail: "울창한 마호가니 숲길 포토존 및 400년 역사의 유서 깊은 산호석 성당 관람" }
+        ],
+        highlight: "편의: 차량 내 시원한 생수와 에어컨이 상시 가동되어 온 가족이 편안합니다."
+      },
+      4: {
+        title: "Day 4 : 오롯이 누리는 리조트 힐링 & 키즈 액티비티",
+        badge: "프라이빗 휴양",
+        desc: "연속 투어의 피로를 풀고 최고급 리조트 부대시설을 만끽하는 여유로운 하루.",
+        timeline: [
+          { time: "09:00", action: "늦잠 & 느긋한 브런치 조식", detail: "알로나 비치 전망 카페에서 스페셜티 커피와 조식" },
+          { time: "10:30", action: "인피니티 풀 & 카약/패들보드", detail: "리조트 프라이빗 비치에서 무동력 해양 스포츠 무료 이용" },
+          { time: "14:00", action: "패밀리 스파 & 마사지 타임", detail: "어른들은 아로마 힐링 스파, 자녀들은 키즈 성장 마사지 프로그램 체험" },
+          { time: "17:30", action: "알로나 비치 선셋 & 펍 디너", detail: "붉게 물드는 보홀의 환상적인 일몰을 감상하며 바비큐 플래터와 산미구엘 맥주" }
+        ],
+        highlight: "추천: 아모리타 사프론 레스토랑의 타파스와 망고 칵테일을 강력 추천합니다."
+      },
+      5: {
+        title: "Day 5 : 나팔링 정어리 떼 & 신비의 히낙다난 동굴 & 반딧불 투어",
+        badge: "이색 해양 & 야경",
+        desc: "해변 바로 앞에서 은빛으로 소용돌이치는 정어리 떼와 밤하늘 반딧불이 감동.",
+        timeline: [
+          { time: "09:30", action: "나팔링 리프 (Napaling Reef)", detail: "바다로 5미터만 들어가면 마주하는 압도적인 정어리 떼의 군무 감상" },
+          { time: "11:30", action: "히낙다난 동굴 (Hinagdanan Cave)", detail: "자연 채광이 비치는 천연 종유석 동굴 속 신비로운 담수 풀 감상" },
+          { time: "13:00", action: "보홀 비 팜(Bohol Bee Farm) 오가닉 런치", detail: "바다 절벽 위 뷰맛집에서 꽃잎 샐러드와 수제 꿀 아이스크림 디저트" },
+          { time: "18:00", action: "로복강 맹그로브 반딧불이 단독 보트", detail: "어둠 속에서 반짝이는 수만 마리의 반딧불이를 눈앞에서 감상하는 환상적인 나이트 투어" }
+        ],
+        highlight: "아이들이 가장 좋아하는 코스: 밤하늘 크리스마스트리 같은 반딧불이 군집!"
+      },
+      6: {
+        title: "Day 6 : 기념품 쇼핑 & 로컬 마켓 & 마지막 만찬",
+        badge: "로컬 컬처 & 쇼핑",
+        desc: "보홀의 특산품 쇼핑과 여유로운 마지막 밤을 기념하는 시간.",
+        timeline: [
+          { time: "10:00", action: "모달라 몰 & 알로나 로컬 상점가", detail: "건망고, 바나나칩, 수제 비누, 보홀 특산 땅콩과자(피넛키세스) 기념품 구입" },
+          { time: "12:30", action: "유명 게요리/알리망오 런치", detail: "칠리크랩과 갈릭 라이스로 풍성한 해산물 만찬" },
+          { time: "15:00", action: "마지막 패킹 및 리조트 풀 수영", detail: "가장 마음에 들었던 리조트 스팟에서 가족 기념사진 촬영" },
+          { time: "19:00", action: "작별 파티 & 라이브 음악 비치 디너", detail: "해변 라이브 밴드 연주를 들으며 6박 7일의 추억을 정리하는 시간" }
+        ],
+        highlight: "팁: 보홀 팡라오 공항은 액체류 규정이 엄격하므로 기념품 잼/오일은 수하물로 패킹하세요."
+      },
+      7: {
+        title: "Day 7 : 보홀 출발 ➔ 인천 도착 ➔ 광명 안전 귀가",
+        badge: "안전 귀국",
+        desc: "호텔 체크아웃 후 10분 만에 공항 이동, 편안한 직항편으로 귀가합니다.",
+        timeline: [
+          { time: "10:30", action: "리조트 체크아웃 & 전용 밴 탑승", detail: "호텔 로비에서 단독 밴 픽업, 팡라오 공항으로 10분 이동" },
+          { time: "11:00", action: "팡라오 공항(TAG) 출국 수속", detail: "여유로운 수속 후 면세점 및 카페 이용" },
+          { time: "13:10", action: "보홀 출발 ➔ 인천행 비행", detail: "직항 귀국편 탑승 (오후 18:40 인천공항 도착 예정)" },
+          { time: "19:30", action: "인천 도착 후 광명 복귀", detail: "수하물 수령 후 광명행 리무진 밴 탑승 ➔ 광명 자택 안전 도착" }
+        ],
+        highlight: "완벽한 마무리: 오후 8시경 광명 자택에 도착하여 다음 날 일상 복귀에 부담이 없습니다."
+      }
+    };
+
+    let currentPax = 4;
+
+    // 일차별 일정 렌더링 함수
+    function renderDay(dayNum) {
+      const day = ITINERARY_DATA[dayNum];
+      if (!day) return;
+
+      let timelineHtml = day.timeline.map((item, idx) => `
+        <div class="flex gap-4 items-start relative pb-6 ${idx === day.timeline.length - 1 ? '' : 'border-l border-slate-700 ml-3 pl-6'}">
+          <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-cyan-400 ring-4 ring-slate-800"></div>
+          <div class="text-xs font-mono font-bold text-cyan-300 w-14 shrink-0 pt-0.5">${item.time}</div>
+          <div>
+            <h4 class="text-sm font-bold text-white mb-1">${item.action}</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">${item.detail}</p>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('dayContent').innerHTML = `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 border-b border-slate-700/80 pb-4">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full text-[11px] font-bold bg-cyan-900/60 text-cyan-300 border border-cyan-700 mb-2">${day.badge}</span>
+            <h3 class="text-xl sm:text-2xl font-black text-white">${day.title}</h3>
+            <p class="text-xs text-slate-400 mt-1">${day.desc}</p>
+          </div>
+          <span class="text-xs text-amber-300 font-medium bg-amber-950/40 border border-amber-800/50 px-3 py-1.5 rounded-xl self-start sm:self-center">
+            <i class="fa-solid fa-star text-amber-400 mr-1"></i> 4인 단독 프라이빗
+          </span>
+        </div>
+        <div class="mt-6 mb-6">
+          ${timelineHtml}
+        </div>
+        <div class="p-3.5 bg-cyan-950/40 rounded-xl border border-cyan-800/50 text-xs text-cyan-200 flex items-center gap-2">
+          <i class="fa-solid fa-circle-info text-cyan-400 text-sm"></i>
+          <span>${day.highlight}</span>
+        </div>
+      `;
+    }
+
+    function switchDay(dayNum) {
+      document.querySelectorAll('.day-tab').forEach((btn, i) => {
+        if (i + 1 === dayNum) {
+          btn.className = "day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-cyan-500 text-slate-950 shadow-lg";
+        } else {
+          btn.className = "day-tab px-5 py-2.5 rounded-full text-xs font-bold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700";
+        }
+      });
+      renderDay(dayNum);
+    }
+
+    // 여행 인원 토글
+    function setTravelers(num) {
+      currentPax = num;
+      document.getElementById('calcPaxLabel').innerText = num;
+      
+      [3, 4, 5].forEach(n => {
+        const btn = document.getElementById(`btnPax${n}`);
+        if (n === num) {
+          btn.className = "py-2.5 rounded-xl border-2 border-cyan-500 bg-cyan-50 text-cyan-800 text-xs font-bold transition-colors";
+        } else {
+          btn.className = "py-2.5 rounded-xl border border-slate-300 bg-white text-xs font-bold hover:border-cyan-500 transition-colors";
+        }
+      });
+      calculateBudget();
+    }
+
+    // 리조트 카드에서 버튼 클릭 시 셀렉트 박스 동기화
+    function selectResort(name, pricePerNight) {
+      const select = document.getElementById('resortSelect');
+      for (let i = 0; i < select.options.length; i++) {
+        if (parseInt(select.options[i].value) === pricePerNight) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      calculateBudget();
+      document.getElementById('budget').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 실시간 견적 계산기
+    function calculateBudget() {
+      const flightPerPerson = parseInt(document.querySelector('input[name="flightOption"]:checked').value);
+      const totalFlight = flightPerPerson * currentPax;
+
+      const resortPerNight = parseInt(document.getElementById('resortSelect').value);
+      const totalResort = resortPerNight * 6; // 6박
+
+      let transferCost = 80000; // 보홀 팡라오 공항-리조트 밴 기본 픽업/샌딩
+      if (document.getElementById('checkGwangmyeong').checked) {
+        transferCost += 190000; // 광명-인천공항 왕복 밴
+      }
+
+      let tourCost = 0;
+      if (document.getElementById('checkHopping').checked) tourCost += 280000;
+      if (document.getElementById('checkLandTour').checked) tourCost += 340000;
+
+      let diningCost = 0;
+      if (document.getElementById('checkDining').checked) {
+        diningCost = Math.round(900000 * (currentPax / 4));
+      }
+
+      const totalKRW = totalFlight + totalResort + transferCost + tourCost + diningCost;
+      const totalPHP = Math.round(totalKRW / 24.5);
+      const perPerson = Math.round(totalKRW / currentPax);
+
+      // DOM 갱신
+      document.getElementById('detailFlight').innerText = totalFlight.toLocaleString() + '원';
+      document.getElementById('detailResort').innerText = totalResort.toLocaleString() + '원';
+      document.getElementById('detailTransfer').innerText = transferCost.toLocaleString() + '원';
+      document.getElementById('detailTour').innerText = tourCost.toLocaleString() + '원';
+      document.getElementById('detailDining').innerText = diningCost.toLocaleString() + '원';
+
+      document.getElementById('totalKRW').innerText = totalKRW.toLocaleString();
+      document.getElementById('totalPHP').innerText = totalPHP.toLocaleString();
+      document.getElementById('perPersonKRW').innerText = perPerson.toLocaleString();
+
+      // 문의 모달용 서머리 텍스트
+      const resortText = document.getElementById('resortSelect').options[document.getElementById('resortSelect').selectedIndex].text.split('(')[0].trim();
+      document.getElementById('custBudgetSummary').value = `${currentPax}인 가족 / 6박7일 / ${resortText} / 약 ${totalKRW.toLocaleString()}원`;
+    }
+
+    // 모바일 메뉴 토글
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars';
+      } else {
+        icon.className = 'fa-solid fa-xmark';
+      }
+    }
+
+    // 비디오 모달 열기/닫기
+    function toggleVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const iframe = document.getElementById('videoIframe');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        // 공식 보홀 관광 홍보 영상 임베드
+        iframe.src = "https://www.youtube-nocookie.com/embed/5aC7V2nE5m4?autoplay=1&mute=0";
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        iframe.src = "";
+      }
+    }
+
+    // 상담 모달
+    function openModal() {
+      document.getElementById('reserveModal').classList.remove('hidden');
+      document.getElementById('reserveModal').classList.add('flex');
+    }
+
+    function openModalWithBudget() {
+      openModal();
+    }
+
+    function closeModal() {
+      document.getElementById('reserveModal').classList.add('hidden');
+      document.getElementById('reserveModal').classList.remove('flex');
+      document.getElementById('modalNotice').classList.add('hidden');
+    }
+
+    // 폼 제출 핸들러 (Google Apps Script 연동 대비)
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>접수 처리 중...';
+      submitBtn.disabled = true;
+
+      // Apps Script 연동 시 google.script.run 등을 통해 구글 스프레드시트로 전송 가능
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        document.getElementById('modalNotice').classList.remove('hidden');
+        
+        // 3초 후 닫기
+        setTimeout(() => {
+          closeModal();
+          document.getElementById('inquiryForm').reset();
+          calculateBudget();
+        }, 2500);
+      }, 1000);
+    }
+
+    // 초기화
+    window.onload = function() {
+      renderDay(1);
+      calculateBudget();
+    };
+  </script>
+</body>
+</html>
